@@ -1,0 +1,24 @@
+.food-display{
+    margin-top: 30px;
+}
+.food-display h2{
+    font-size: max(2vw,24px);
+    font-weight: 600;
+}
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+    margin-top: 30px;
+    gap: 30px;
+    row-gap: 50px;
+}
+/* This code defines the layout of columns within a CSS Grid container. Let's break it down part by part:
+grid-template-columns: This property specifies how the columns of a grid container are sized and positioned
+ repeat(auto-fill) repeat is a function used to repeat a set of track definitions multiple times within the 
+ grid container. auto-fill is a keyword argument for repeat that tells the browser to repeat the following 
+ track definitions (...) as many 
+ times as necessary to fill the available width of the container.,
+minmax(240px, 1fr) In this case,
+the minimum size is set to 240px. This ensures each child element within the column has enough space to display 
+its content. The maximum size is set to 1fr. This is a unit representing one fraction of the remaining space available in the container. So,
+if there's extra space after accommodating all the minimum widths, the columns will expand proportionally to fill that space.;*/

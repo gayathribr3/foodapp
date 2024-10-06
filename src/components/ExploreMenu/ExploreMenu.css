@@ -1,0 +1,65 @@
+.explore-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.explore-menu h1{
+    color: tomato;
+    font-weight: 500;
+}
+.explore-menu-text{
+    max-width: 60%;
+}
+/* The first value,
+20px,
+sets the margin for the top and bottom of the element. It uses the "px" unit,
+which refers to pixels. So,
+the element will have 20 pixels of space added above and below it. The second value,
+0px,
+sets the margin for the left and right sides of the element. In this case,
+there will be no margin added to the left and right sides,
+effectively collapsing them to the adjacent elements */
+.explore-menu-list{
+    display: flex;
+    justify-content: space-between; /* you can achieve a layout where elements are positioned at the opposite ends of their container with even spacing in between. */
+    align-items:center ;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x:scroll ;
+
+}
+/* for hiding scrollbar */
+.explore-menu-list::-webkit-scrollbar{
+    display: none;
+}
+.explore-menu-list-item img{
+width: 7.5vw;
+min-width: 30px;
+cursor: pointer;
+border-radius: 50%;
+transition: 0.2s;
+}
+.explore-menu-list-item p{
+    margin-top: 10px;
+    color: black;
+    font-size: max(1.4vw,16px);
+    cursor: pointer;
+}
+/* The hr tag in HTML stands for horizontal rule. It's used to create a thematic break between sections of content on a webpage, typically visualized as a horizontal line.*/
+.explore-menu hr{
+    margin: 10px 0px;
+    height: 2px;
+    background-color: #c2c2c2;
+    border: none;
+}
+.explore-menu-list-item .active{
+    border: 4px solid tomato;
+    padding: 2px;
+}
+@media (max-width:1050px) {
+    .explore-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+}

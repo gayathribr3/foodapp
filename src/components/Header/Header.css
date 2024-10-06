@@ -1,0 +1,60 @@
+.header{
+    height: 34vw;
+    margin: 30px auto;/*sets top and bottom margin to 30px and left and right to automatically distribute the available spaces equally on both sides of the element*/
+    background: url('/header_img.png') no-repeat;
+    background-size: contain; /* property instructs the browser to resize a background image while maintaining its aspect ratio (the proportional relationship between width and height).*/
+    position: relative;/* position: relative;
+        creates a reference point for the element. You can then nudge it around within its original space in the layout*/
+}
+.header-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column; /* It establishes the main axis of the flex container to be vertical,
+        similar to a column. Flex items (child elements) will be stacked on top of each other,
+        one below the other.*/
+    align-items: start;
+    gap: 1.5vw; /* creates a gap of 1.5% of the viewport's width between each item in the container.*/
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+     animation: fadeIn 3s;
+}
+.header-content h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw,22px);
+}
+.header-content p{
+    font-size: 1vw;
+    color: white;
+}
+/* max(): This function ensures that the larger of the two values provided is applied as the font size. 4.5vw: This value represents 4.5% of the viewport width. As the viewport width changes,
+the font size will adjust accordingly. The "vw" unit stands for "viewport width."
+22px: This value sets a minimum font size of 22 pixels. Regardless of the viewport width,
+the font size will never be smaller than 22 pixels. */
+.header-content button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+
+}
+@media (max-width:1050px) {
+    .header-content{
+        max-width: 45%;
+    }
+}
+@media (max-width:750px) {
+    .header-content {
+        max-width: 65%;
+    }
+    .header-content p{
+        display: none;
+    }
+    .header-content button{
+        padding: 2vw 4vw;
+    }
+}
